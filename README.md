@@ -4,4 +4,4 @@ The project has improved a LOT. the performannce is amazing. It runs smooth on b
 
 Currently, we are at version 3.14.
 
-![house at hilltop](hilltop.png)
+![house at hilltop](hilltop.bmp)
