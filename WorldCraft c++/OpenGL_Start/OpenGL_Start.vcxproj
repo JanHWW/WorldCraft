@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{38B80626-0E97-4968-ADFB-491FFE34E050}</ProjectGuid>
+    <RootNamespace>OpenGLStart</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)$(ProjectDir)lib-vc2015;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;user32.lib;gdi32.lib;shell32.lib;opengl32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)$(ProjectDir)lib-vc2015;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;user32.lib;gdi32.lib;shell32.lib;opengl32.lib;FreeImage.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Downloads\glad\src\glad.c" />
+    <ClCompile Include="..\..\..\..\Downloads\MineCraft-One-Week-Challenge-master\MineCraft-One-Week-Challenge-master\Source\Maths\Frustum.cpp" />
+    <ClCompile Include="Source\Chunk\ActionContainer.cpp" />
+    <ClCompile Include="Source\Controls\Control.cpp" />
+    <ClCompile Include="Source\Entities\Entity.cpp" />
+    <ClCompile Include="Source\Functions\Lightmap.cpp" />
+    <ClCompile Include="Source\Functions\ArrayDrawer.cpp" />
+    <ClCompile Include="Source\Functions\Functions.cpp" />
+    <ClCompile Include="Source\Image\Image.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\Mobs\Mob.cpp" />
+    <ClCompile Include="Source\Mobs\Pig.cpp" />
+    <ClCompile Include="Source\Noise\FastNoise\FastNoiseSIMD.cpp" />
+    <ClCompile Include="Source\Noise\FastNoise\FastNoiseSIMD\FastNoiseSIMD.cpp" />
+    <ClCompile Include="Source\Noise\FastNoise\FastNoiseSIMD\FastNoiseSIMD_avx2.cpp" />
+    <ClCompile Include="Source\Noise\FastNoise\FastNoiseSIMD\FastNoiseSIMD_avx512.cpp" />
+    <ClCompile Include="Source\Noise\FastNoise\FastNoiseSIMD\FastNoiseSIMD_internal.cpp" />
+    <ClCompile Include="Source\Noise\FastNoise\FastNoiseSIMD\FastNoiseSIMD_neon.cpp" />
+    <ClCompile Include="Source\Noise\FastNoise\FastNoiseSIMD\FastNoiseSIMD_sse2.cpp" />
+    <ClCompile Include="Source\Noise\FastNoise\FastNoiseSIMD\FastNoiseSIMD_sse41.cpp" />
+    <ClCompile Include="Source\Noise\RealNoise\KenPerlin.cpp" />
+    <ClCompile Include="Source\Noise\RealNoise\LayerNoisePerlin.cpp" />
+    <ClCompile Include="Source\Noise\SimplexNoise\LayerNoiseSimplex.cpp" />
+    <ClCompile Include="Source\Noise\SimplexNoise\SimplexNoise.cpp" />
+    <ClCompile Include="Source\Noise\Wiki\PerlinNoise.cpp" />
+    <ClCompile Include="Source\Chunk\Chunk.cpp" />
+    <ClCompile Include="Source\Rendering\Math\Frustum\frustum.cpp" />
+    <ClCompile Include="Source\Rendering\Math\vec3.cpp" />
+    <ClCompile Include="Source\Rendering\Mesh\Mesh.cpp" />
+    <ClCompile Include="Source\Rendering\Renderwindow.cpp" />
+    <ClCompile Include="Source\ShaderUtil\ShaderUtil.cpp" />
+    <ClCompile Include="Source\Texture\Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Downloads\MineCraft-One-Week-Challenge-master\MineCraft-One-Week-Challenge-master\Source\Maths\Frustum.h" />
+    <ClInclude Include="Source\Chunk\ActionContainer.h" />
+    <ClInclude Include="Source\Controls\Control.h" />
+    <ClInclude Include="Source\Entities\Entity.h" />
+    <ClInclude Include="Source\Functions\ArrayDrawer.h" />
+    <ClInclude Include="Source\Functions\Functions.h" />
+    <ClInclude Include="Source\Functions\LightMap.h" />
+    <ClInclude Include="Source\Functions\Math.h" />
+    <ClInclude Include="Source\Functions\TextureConstants.h" />
+    <ClInclude Include="Source\Image\Image.h" />
+    <ClInclude Include="Source\main.h" />
+    <ClInclude Include="Source\Rendering\includeGL.h" />
+    <ClInclude Include="Source\Rendering\Mesh\MeshConstants.h" />
+    <ClInclude Include="Source\Mobs\Mob.h" />
+    <ClInclude Include="Source\Mobs\Pig.h" />
+    <ClInclude Include="Source\Noise\FastNoise\FastNoiseSIMD.h" />
+    <ClInclude Include="Source\Noise\FastNoise\FastNoiseSIMD\FastNoiseSIMD.h" />
+    <ClInclude Include="Source\Noise\FastNoise\FastNoiseSIMD\FastNoiseSIMD_internal.h" />
+    <ClInclude Include="Source\Noise\RealNoise\KenPerlin.h" />
+    <ClInclude Include="Source\Noise\RealNoise\LayerNoisePerlin.h" />
+    <ClInclude Include="Source\Noise\SimplexNoise\LayerNoiseSimplex.h" />
+    <ClInclude Include="Source\Noise\SimplexNoise\SimplexNoise.h" />
+    <ClInclude Include="Source\Noise\Wiki\PerlinNoise.h" />
+    <ClInclude Include="Source\Chunk\Chunk.h" />
+    <ClInclude Include="Source\Chunk\WorldConstants.h" />
+    <ClInclude Include="Source\Rendering\Math\Frustum\frustum.h" />
+    <ClInclude Include="Source\Rendering\Math\Math.h" />
+    <ClInclude Include="Source\Rendering\Math\vec3.h" />
+    <ClInclude Include="Source\Rendering\Math\vector.h" />
+    <ClInclude Include="Source\Rendering\Mesh\Mesh.h" />
+    <ClInclude Include="Source\Rendering\RenderWindow.h" />
+    <ClInclude Include="Source\Rendering\ShaderProgram\Shader.h" />
+    <ClInclude Include="Source\Rendering\ShaderProgram\Shader_m.h" />
+    <ClInclude Include="Source\Texture\ImageLoader\ImageLoader.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Source\ShaderUtil\ShaderUtil.h" />
+    <ClInclude Include="Source\Texture\Texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

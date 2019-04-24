@@ -1,0 +1,29 @@
+FastNoiseSIMD example
+https://github.com/Auburns/FastNoiseSIMD/wiki
+NoiseSettings
+https://github.com/Auburns/FastNoiseSIMD/wiki/Noise-Settings
+
+to release:
+build->configuration manager->configuration = release
+to debug:
+build->configuration manager->configuration = debug
+close to apply
+
+minecraft world gen:
+https://www.youtube.com/watch?v=FE5S2NeD7uU
+
+learnopengl.com
+
+Checklist:
+Raycast v
+Move view with mouse v
+or arrow keys v
+Move player with awsd v
+infinity world v
+
+mousemove available with space-key
+
+~[classname] = on delete
+
+
+classes aren
