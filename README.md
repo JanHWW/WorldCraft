@@ -4,5 +4,8 @@ The project has improved a LOT. the performannce is amazing. It runs smooth on b
 
 Currently, we are at version 3.14.
 
-#Here is a house at a hilltop:
+Here is a house at a hilltop:
 ![house at hilltop](hilltop.bmp)
+
+Fish eye view:
+![fish eye view](fisheyeview.png)
